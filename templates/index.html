@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <h1> Pet Owner Directory </h1>
+    <hr>
+    {%for each in person %}
+      <p>Owner Name: {{ each.name }}<br>      </p>
+        <p> Pets Names:
+            {% for thisone in each.owner %}
+            <strong>{{ thisone.name }}, </strong>
+            {% endfor %}
+</p>
+      <hr>
+    {% endfor %}
+  </body>
+</html>
